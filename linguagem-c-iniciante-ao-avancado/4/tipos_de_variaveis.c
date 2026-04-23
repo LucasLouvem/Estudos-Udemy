@@ -22,4 +22,14 @@ void main(){
     printf("Digite um valor para b: ");
     scanf("%d", &b);
     printf("O valor de b é: %d\n", b);
+
+    char str[100];
+    printf("Digite uma string: ");
+    scanf("%s", str);
+    printf("A string digitada foi: %s\n", str);
+    fflush(stdin); // Limpa o buffer do teclado para evitar problemas com a leitura de strings
+    printf("Digite uma string: ");
+    scanf("%s", str);
+    printf("A string digitada foi: %s\n", str);
+
 }
