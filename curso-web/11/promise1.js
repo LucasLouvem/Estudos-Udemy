@@ -1,12 +1,10 @@
-function falarDepoisDe(segundos, frase) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(frase);
-    }, segundos * 1000);
-  });
-}
+const primeiroElemento = (arrayOuString) => arrayOuString[0];
+const letraMinuscula = (letra) => letra.toLowerCase();
 
-falarDepoisDe(3, "Que legal!").then((frase) =>
-  console.log(frase.concat("?!?")),
-);
-//   .then((outraFrase) => console.log(outraFrase));
+let p = new Promise(function (resolve) {
+  resolve(["Ana", "Bia", "Carlos"]);
+})
+  .then(primeiroElemento)
+  .then(primeiroElemento)
+  .then(letraMinuscula)
+  .then(console.log);
